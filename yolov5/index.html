@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html 
+	lang="zh-CN">
+	<head>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+		<!--自定义添加的 Loading Page CSS 样式-->
+		
+<link rel="stylesheet" href="/css/118.css">
+
+		
+    			<link rel="stylesheet" href="true" crossorigin /> 
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> yolov5 -  紅葉~</title>
+		<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+		<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+		<!-- lazyload -->
+		<script src="https://unpkg.com/lazysizes@5.1.0/lazysizes.min.js"></script>
+		<!-- smooth-scrolling -->
+		<script src="https://unpkg.com/smooth-scrolling.js@1.0.0"></script>
+		<!-- highlight -->
+		<link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/atom-one-dark.min.css" />
+		<script src="//unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+			<link rel="stylesheet" href="//at.alicdn.com/t/font_3299330_el19bsi97h8.css" crossorigin />
+		
+		<link
+			rel="shortcut icon"
+			href="/yolov5/ev401a.jpg"
+			type="image/png"
+		/>
+		
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+			
+				
+<link rel="stylesheet" href="/style.css">
+
+			
+				
+<link rel="stylesheet" href="/custom.css">
+
+			
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 6.3.0"></head>
+
+	<body>
+	
+		<div class="GalMenu GalDropDown">
+	      <div class="circle" id="gal">
+	        <div class="ring">
+	          <a href="/" class="menuItem">首页</a>
+	          <a href="javascript:history.go(1);" class="menuItem">前进</a>
+	          <a href="javascript:$('html,body').animate({scrollTop:0},500);" 				class="menuItem">顶部</a>
+	          <a href="javascript:location.reload();" class="menuItem">刷新</a>
+	          <a href="javascript:history.go(-1);" class="menuItem">后退</a>
+			</div>
+				<audio id="audio" src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@master/hexo/audio/niconiconi.mp3"></audio>
+		  </div>
+	
+	
+	   
+<link rel="stylesheet" href="/css/search.css">
+
+	<div class="search">
+    <i class="material-icons search-icon search-start">search</i>
+    <input type="text" class="search-input" placeholder="Searching..." />
+    <i class="material-icons search-icon search-clear">clear</i>
+	<div class="search-results"></div>
+        
+        
+    <script src="\js\search-box.js"></script>
+	</div>
+
+	<script type="text/javascript">
+	var items = document.querySelectorAll('.menuItem'); 
+	for (var i = 0, l = items.length; i < l; i++) {
+        items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+        items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
+      }
+	</script>
+	<script>window.jQuery || document.write('<script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@master/hexo/js/jquery-2.1.1.min.js"><\/script>')</script>	
+	<script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@master/hexo/js/GalMenu.js"></script>
+
+		<!--自定义的 Loading Page-->
+		
+		    
+  <div id="loader-box">
+    /* 你的 HTML 代码将放在这里 */
+<body>
+    <div class="loader-wrapper">
+        <div class="loader"><img src="/img/loading.gif" data-original="/images/1.png" alt=""></div>
+        <div class="loader-text">
+            <!-- 10个div -->
+            <div>L</div>
+            <div>O</div>
+            <div>A</div>
+            <div>D</div>
+            <div>I</div>
+            <div>N</div>
+            <div>G</div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+    <script>
+        var endLoading = function () {
+            document.body.style.overflow = 'auto';
+            setTimeout(function(){
+        document.getElementById('loader-box').remove(); 
+    }, 1000 /* 单位：毫秒 */ );
+        }
+        window.addEventListener('load',endLoading);
+    </script>
+  </div>
+
+
+
+		
+		<div
+			class="kira-background"
+			style="background-image: url('/yolov5/ev407a.png')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="紅葉~">
+        <img
+			src="/yolov5/ev401a.jpg"
+			alt="紅葉"
+		/>
+    </a>
+</div>
+
+
+<!--自定义看板娘-->
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script src="/live2d-widget/autoload.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+
+
+
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a href="/yolov5/ev401a.jpg" title="紅葉">
+			<img
+				src="/yolov5/ev401a.jpg"
+				alt="紅葉"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>22</div>
+		<div><span>标签</span>8</div>
+		<div><span>分类</span>5</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="中转站"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				中转站
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="/QQ.html"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/457236468/"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/Swe-et/"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://nav.wiki-power.com/index.html"
+				target="_blank"
+				mdui-tooltip="{content: 'wiki'}"
+				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-team
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+  <div class="kira-widget-wrap">
+    <h3 class="kira-widget-title">分类</h3>
+    <div class="kira-widget">
+      <ul class="category-list">
+        
+        
+
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/git/">
+              git
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/raspberry/">
+              raspberry
+            </a>
+            <span class="category-list-count">3</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/robomaster/">
+              robomaster
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/ubuntu/">
+              ubuntu
+            </a>
+            <span class="category-list-count">10</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/深度学习/">
+              深度学习
+            </a>
+            <span class="category-list-count">4</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/ChatGPT/" style="font-size: 10px;">ChatGPT</a> <a href="/tags/Mindvision/" style="font-size: 10px;">Mindvision</a> <a href="/tags/opencv/" style="font-size: 10px;">opencv</a> <a href="/tags/raspberry/" style="font-size: 13.33px;">raspberry</a> <a href="/tags/robomaster/" style="font-size: 10px;">robomaster</a> <a href="/tags/ubuntu/" style="font-size: 20px;">ubuntu</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 16.67px;">深度学习</a> <a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" style="font-size: 10px;">科学上网</a>
+		</div>
+		
+	</div>
+
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			文章归档
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/">2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">19</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2024
+		<a href="/">紅葉</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="kira-post">
+	<article>
+		
+		<div class="kira-post-cover">
+			<img
+				data-src="/yolov5/0.png"
+				data-sizes="auto"
+				alt="yolov5"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>yolov5</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2023年06月11日</a>
+			<a><i class="kirafont icon-edit-fill"></i>1.4k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 6 分钟</a>
+		</div>
+		
+        <div id="aplayer-pfSnWVYb" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-pfSnWVYb"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "ClariS",
+              author: "treasure",
+              url: "treasure.flac",
+              pic: "/yolov5/1.jpg",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+
+<p>如何运行yolov5</p>
+<p>来到data目录</p>
+<p><img src="/img/loading.gif" data-original="/yolov5/3.png"></p>
+<p>路径是你数据集的路径，记得改！！</p>
+<p>进入models，小模型我用yolov5s，将5s复制一份，改掉名字</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="/img/loading.gif" data-original="/yolov5/4.png" alt="4" class="lazyload"></p>
+<p>将train.py里面的路径改改，拉到第四百多行代码，函数名。。。叫下面图的有</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">&#x27;--cfg&#x27; 是上面models里面xx.yaml的路径<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">&#x27;--data&#x27; 是data里面xx.yaml的路径<br></code></pre></td></tr></table></figure>
+
+<p>运行的话，将detect.py改改</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">&#x27;--weights&#x27; 后面ROOT /之后的路径改成你训练完的模型，一般在runs/train/exp（max最大数是最后训练完成的）<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">&#x27;--source&#x27; 将要识别的图片或视频的路径<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">&#x27;--conf-thres&#x27; 置信度最好改高一些,太低会乱标<br></code></pre></td></tr></table></figure>
+
+
+
+<p>yolov5没什么好说的，暂时没那能力去修改人家的卷积（不知道修改完后是好是坏），顶多就只能改改参数（人称炼丹)</p>
+<p>下面是一些yolov5参数的注释</p>
+<p>train.py</p>
+<p><img src="/img/loading.gif" data-original="/yolov5/2.png"></p>
+<p>detect.py</p>
+<p><img src="/img/loading.gif" data-original="/yolov5/1.png"></p>
+<p>yolov5的一些小问题：</p>
+<p><img src="/img/loading.gif" data-original="/yolov5/5.png"></p>
+<p>解决方法：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Thebest_jack/article/details/125649451">参考博客</a></p>
+<p>iou：预测框与真实框的差距</p>
+<p>map：精度x召回率的平均值</p>
+<p>NMS（非极大值抑制）:获取iou大于一定比例的，按置信度进行排序，取其中最大的</p>
+<p>batch normalization（BN）：它是一种在神经网络的每一层中对输入进行归一化的方法</p>
+<h3><span id="yolov5网络结构图">Yolov5网络结构图</span></h3><p>安装好netron工具，就可以可视化的打开Yolov5的网络结构。</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/nan355655600/article/details/106245563">netron下载安装流程</a></p>
+<p>将四种模型pt文件的转换成对应的onnx文件后，即可使用<a href="https://link.zhihu.com/?target=https://blog.csdn.net/nan355655600/article/details/106245563">netron工具</a>查看。</p>
+<p><strong>（1）输入端：</strong>Mosaic数据增强：<strong>随机缩放</strong>、<strong>随机裁剪</strong>、<strong>随机排布</strong>的方式进行拼接</p>
+<p>​						  自适应锚框计算：针对不同的数据集，会有<strong>初始设定长宽的锚框</strong>，网络在初始锚框的基</p>
+<p>​						  础上输出预测框，进而和<strong>真实框</strong>进行比对，计算两者差</p>
+<p>​				  		 距，再反向更新，<strong>迭代网络参数</strong>。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="/img/loading.gif" data-original="/yolov5/6.png" alt="6" class="lazyload"></p>
+<p>​						控制的代码即<strong>train.py</strong>中上面一行代码，设置成<strong>False</strong>，每次训练时，不会自动计算。</p>
+<p>​						自适应图片缩放：因此在Yolov5的代码中datasets.py的letterbox函数中进行了修改，对														 原始图像<strong>自适应的添加最少的黑边</strong>。黑边减少，计算量也减少，检测														 速度提升</p>
+<p>​														  计算缩放比例，长&#x2F;416,宽&#x2F;416，选择小的缩放系数</p>
+<p><strong>（2）Backbone：</strong>Focus结构：切片操作，比如右图的切片示意图，4 * 4 * 3的图像切片后变成2*2 *12的特征图</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="/img/loading.gif" data-original="/yolov5/7.png" alt="7" class="lazyload"></p>
+<p>​								 CSP结构：<br><strong>（3）Neck：</strong>FPN+PAN结构<br><strong>（4）Prediction：</strong>GIOU_Loss</p>
+<p><strong>IOU_Loss：</strong>主要考虑检测框和目标框重叠面积。</p>
+<p><strong>GIOU_Loss：</strong>在IOU的基础上，解决边界框不重合时的问题。</p>
+<p><strong>DIOU_Loss：</strong>在IOU和GIOU的基础上，考虑边界框中心点距离的信息。</p>
+<p><strong>CIOU_Loss：</strong>在DIOU的基础上，考虑边界框宽高比的尺度信息。</p>
+<h4><span id="yolov8">yolov8</span></h4><h5><span id="模型推理过程">模型推理过程</span></h5><p><strong>(1) bbox 积分形式转换为 4d bbox 格式</strong><br>对 Head 输出的 bbox 分支进行转换，利用 Softmax 和 Conv 计算将积分形式转换为 4 维 bbox 格式<br><strong>(2) 维度变换</strong><br>YOLOv8 输出特征图尺度为 80x80、40x40 和 20x20 的三个特征图。Head 部分输出分类和回归共 6 个尺度的特征图。<br>将 3 个不同尺度的类别预测分支、bbox 预测分支进行拼接，并进行维度变换。为了后续方便处理，会将原先的通道维度置换到最后，类别预测分支 和 bbox 预测分支 shape 分别为 (b, 80x80+40x40+20x20, 80)&#x3D;(b,8400,80)，(b,8400,4)。<br><strong>(3) 解码还原到原图尺度</strong><br>分类预测分支进行 Sigmoid 计算，而 bbox 预测分支需要进行解码，还原为真实的原图解码后 xyxy 格式。<br><strong>(4) 阈值过滤</strong><br>遍历 batch 中的每张图，采用 score_thr 进行阈值过滤。在这过程中还需要考虑 <strong>multi_label 和 nms_pre，确保过滤后的检测框数目不会多于 nms_pre。</strong><br><strong>(5) 还原到原图尺度和 nms</strong><br>基于前处理过程，将剩下的检测框还原到网络输出前的原图尺度，然后进行 nms 即可。最终输出的检测框不能多于 <strong>max_per_img。</strong></p>
+<h4><span id="特征图可视化">特征图可视化</span></h4><p>MMYOLO 中提供了一套完善的特征图可视化工具，可以帮助用户可视化特征的分布情况。</p>
+<p>以 YOLOv8-s 模型为例，第一步需要下载官方权重，然后将该权重通过<a href="https://link.zhihu.com/?target=https://github.com/open-mmlab/mmyolo/blob/dev/tools/model_converters/yolov8_to_mmyolo.py">https://github.com/open-mmlab/mmyolo/blob/dev/tools/model_converters&#x2F;yolov8_to_mmyolo.py</a> 脚本将去转换到 MMYOLO 中，注意必须要将脚本置于官方仓库下才能正确运行，假设得到的权重名字为 mmyolov8s.pth</p>
+<p>假设想可视化 backbone 输出的 3 个特征图效果，则只需要</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">cd mmyolo <span class="hljs-comment"># dev 分支</span><br>python demo/featmap_vis_demo.py demo/demo.jpg configs/yolov8/yolov8_s_syncbn_fast_8x<br></code></pre></td></tr></table></figure>
+
+<p>需要特别注意，为了确保特征图和图片叠加显示能对齐效果，需要先将原先的 test_pipeline 替换为如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python">test_pipeline = [<br>    <span class="hljs-built_in">dict</span>(<br>        <span class="hljs-built_in">type</span>=<span class="hljs-string">&#x27;LoadImageFromFile&#x27;</span>,<br>        file_client_args=_base_.file_client_args),<br>    <span class="hljs-built_in">dict</span>(<span class="hljs-built_in">type</span>=<span class="hljs-string">&#x27;mmdet.Resize&#x27;</span>, scale=img_scale, keep_ratio=<span class="hljs-literal">False</span>), <span class="hljs-comment"># 这里将 LetterResize 修改成 mmdet.Resize</span><br>    <span class="hljs-built_in">dict</span>(<span class="hljs-built_in">type</span>=<span class="hljs-string">&#x27;LoadAnnotations&#x27;</span>, with_bbox=<span class="hljs-literal">True</span>, _scope_=<span class="hljs-string">&#x27;mmdet&#x27;</span>),<br>    <span class="hljs-built_in">dict</span>(<br>        <span class="hljs-built_in">type</span>=<span class="hljs-string">&#x27;mmdet.PackDetInputs&#x27;</span>,<br>        meta_keys=(<span class="hljs-string">&#x27;img_id&#x27;</span>, <span class="hljs-string">&#x27;img_path&#x27;</span>, <span class="hljs-string">&#x27;ori_shape&#x27;</span>, <span class="hljs-string">&#x27;img_shape&#x27;</span>,<br>                   <span class="hljs-string">&#x27;scale_factor&#x27;</span>))<br>]<br></code></pre></td></tr></table></figure>
+
+
+
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="/img/loading.gif" data-original="/yolov5/9.png" alt="7" class="lazyload"></p>
+<p>看出<strong>不同输出特征图层主要负责预测不同尺度的物体</strong>。</p>
+<p>我们也可以可视化 Neck 层的 3 个输出层特征图：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">cd mmyolo <span class="hljs-comment"># dev 分支</span><br>python demo/featmap_vis_demo.py demo/demo.jpg configs/yolov8/yolov8_s_syncbn_fast_8xb16-500e_coco.py mmyolov8s.pth --channel-reductio squeeze_mean --target-layers neck<br></code></pre></td></tr></table></figure>
+
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>紅葉<br>
+        <strong>本文链接：</strong><a href="https://swe-et.github.io/yolov5/" title="https:&#x2F;&#x2F;swe-et.github.io&#x2F;yolov5&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;swe-et.github.io&#x2F;yolov5&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			  
+			<!-- 先找到与当前文字相同的目录 -->
+			         
+			<!-- 在找到当前文章所在的 index -->
+			        
+			<!-- 上一篇文章 -->
+			<div class="old">
+				<span>上一章</span>
+				<a href="/pytorch/"> pytorch</a>
+			</div>
+			       
+			<!-- 下一篇文章 -->
+			<div class="new">
+				<span>下一章</span>
+				<a href="/model-change/"> 模型转换</a>
+			</div>
+			                          
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+			<a class="kirafont icon-container-fill -link" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="tag">深度学习</a>
+		
+	</div>
+	
+		<script src="/js/kira-code-copy.js"></script>
+	
+	
+	<div class="kira-post-footer">
+		
+	<link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css" />
+	<div id="gitalk"></div>
+	<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+	<script type="text/javascript">
+		const gitalk = new Gitalk({
+			clientID: '605688881c2e008e46bb',
+			clientSecret: '6a86c5fe6ba8b58eef0e3f81f78cd4768f500f69',
+			id: 'yolov5',
+			repo: 'Swe-et.github.io',
+			owner: 'Swe-et',
+			admin: 'Swe-et',
+			title: 'RulatedayDnd5eWiki',
+		});
+		gitalk.render('gitalk');
+	</script>
+
+
+		
+	<link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css" />
+	<div id="gitalk"></div>
+	<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+	<script type="text/javascript">
+		const gitalk = new Gitalk({
+			clientID: '605688881c2e008e46bb',
+			clientSecret: '6a86c5fe6ba8b58eef0e3f81f78cd4768f500f69',
+			id: 'yolov5',
+			repo: 'Swe-et.github.io',
+			owner: 'Swe-et',
+			admin: 'Swe-et',
+			title: 'RulatedayDnd5eWiki',
+		});
+		gitalk.render('gitalk');
+	</script>
+
+
+	</div>
+	
+</div>
+
+
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+<script type="text/javascript" src="\js\top.js"></script>
+
+		</div>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/love.js"></script>
+
+<!--动态线条背景-->
+<script type="text/javascript"
+color="255,192,203" opacity='1.0' zIndex="-2" count="750" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!--浏览器搞笑标题-->
+<script type="text/javascript" src="\js\FunnyTitle.js"></script>
+
+
+
+<!-- 雪花特效 -->
+<script type="text/javascript" src="\js\snow.js"></script>
+	
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
+</html>

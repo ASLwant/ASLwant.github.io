@@ -1,0 +1,25 @@
+body:after {
+    content: " ";
+    position: fixed;
+    inset: 0;
+    background-color: white;
+    z-index: 999;
+    background-image: url(https://xlog.app/cdn-cgi/image/width=750,quality=75,format=auto,onerror=redirect/https://ipfs.xlog.app/ipfs/bafkreidmbrmalshvlprtzt7qdbk4xtolpvpstvunjogl6o373oplmhcrga);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%;
+    animation: fadeOut 3s;
+    animation-fill-mode: forwards;
+    -webkit-transition: fadeOut 3s;
+    transition: fadeOut 3s;
+    pointer-events: none;
+}
+@keyframes fadeOut {
+  50% {
+    opacity: 1;
+  }
+ 
+  100% {
+    opacity: 0;
+  }
+}

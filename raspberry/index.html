@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html 
+	lang="zh-CN">
+	<head>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+		<!--自定义添加的 Loading Page CSS 样式-->
+		
+<link rel="stylesheet" href="/css/118.css">
+
+		
+    			<link rel="stylesheet" href="true" crossorigin /> 
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> ubuntu树莓派无屏幕远程连接 -  紅葉~</title>
+		<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+		<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+		<!-- lazyload -->
+		<script src="https://unpkg.com/lazysizes@5.1.0/lazysizes.min.js"></script>
+		<!-- smooth-scrolling -->
+		<script src="https://unpkg.com/smooth-scrolling.js@1.0.0"></script>
+		<!-- highlight -->
+		<link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/atom-one-dark.min.css" />
+		<script src="//unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+			<link rel="stylesheet" href="//at.alicdn.com/t/font_3299330_el19bsi97h8.css" crossorigin />
+		
+		<link
+			rel="shortcut icon"
+			href="/yolov5/ev401a.jpg"
+			type="image/png"
+		/>
+		
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+			
+				
+<link rel="stylesheet" href="/style.css">
+
+			
+				
+<link rel="stylesheet" href="/custom.css">
+
+			
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 6.3.0"></head>
+
+	<body>
+	
+		<div class="GalMenu GalDropDown">
+	      <div class="circle" id="gal">
+	        <div class="ring">
+	          <a href="/" class="menuItem">首页</a>
+	          <a href="javascript:history.go(1);" class="menuItem">前进</a>
+	          <a href="javascript:$('html,body').animate({scrollTop:0},500);" 				class="menuItem">顶部</a>
+	          <a href="javascript:location.reload();" class="menuItem">刷新</a>
+	          <a href="javascript:history.go(-1);" class="menuItem">后退</a>
+			</div>
+				<audio id="audio" src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@master/hexo/audio/niconiconi.mp3"></audio>
+		  </div>
+	
+	
+	   
+<link rel="stylesheet" href="/css/search.css">
+
+	<div class="search">
+    <i class="material-icons search-icon search-start">search</i>
+    <input type="text" class="search-input" placeholder="Searching..." />
+    <i class="material-icons search-icon search-clear">clear</i>
+	<div class="search-results"></div>
+        
+        
+    <script src="\js\search-box.js"></script>
+	</div>
+
+	<script type="text/javascript">
+	var items = document.querySelectorAll('.menuItem'); 
+	for (var i = 0, l = items.length; i < l; i++) {
+        items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+        items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
+      }
+	</script>
+	<script>window.jQuery || document.write('<script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@master/hexo/js/jquery-2.1.1.min.js"><\/script>')</script>	
+	<script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@master/hexo/js/GalMenu.js"></script>
+
+		<!--自定义的 Loading Page-->
+		
+		    
+  <div id="loader-box">
+    /* 你的 HTML 代码将放在这里 */
+<body>
+    <div class="loader-wrapper">
+        <div class="loader"><img src="/img/loading.gif" data-original="/images/1.png" alt=""></div>
+        <div class="loader-text">
+            <!-- 10个div -->
+            <div>L</div>
+            <div>O</div>
+            <div>A</div>
+            <div>D</div>
+            <div>I</div>
+            <div>N</div>
+            <div>G</div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+    <script>
+        var endLoading = function () {
+            document.body.style.overflow = 'auto';
+            setTimeout(function(){
+        document.getElementById('loader-box').remove(); 
+    }, 1000 /* 单位：毫秒 */ );
+        }
+        window.addEventListener('load',endLoading);
+    </script>
+  </div>
+
+
+
+		
+		<div
+			class="kira-background"
+			style="background-image: url('/yolov5/ev407a.png')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="紅葉~">
+        <img
+			src="/yolov5/ev401a.jpg"
+			alt="紅葉"
+		/>
+    </a>
+</div>
+
+
+<!--自定义看板娘-->
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script src="/live2d-widget/autoload.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+
+
+
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a href="/yolov5/ev401a.jpg" title="紅葉">
+			<img
+				src="/yolov5/ev401a.jpg"
+				alt="紅葉"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>22</div>
+		<div><span>标签</span>8</div>
+		<div><span>分类</span>5</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="中转站"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				中转站
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="/QQ.html"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/457236468/"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/Swe-et/"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://nav.wiki-power.com/index.html"
+				target="_blank"
+				mdui-tooltip="{content: 'wiki'}"
+				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-team
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+  <div class="kira-widget-wrap">
+    <h3 class="kira-widget-title">分类</h3>
+    <div class="kira-widget">
+      <ul class="category-list">
+        
+        
+
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/git/">
+              git
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/raspberry/">
+              raspberry
+            </a>
+            <span class="category-list-count">3</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/robomaster/">
+              robomaster
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/ubuntu/">
+              ubuntu
+            </a>
+            <span class="category-list-count">10</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/深度学习/">
+              深度学习
+            </a>
+            <span class="category-list-count">4</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/ChatGPT/" style="font-size: 10px;">ChatGPT</a> <a href="/tags/Mindvision/" style="font-size: 10px;">Mindvision</a> <a href="/tags/opencv/" style="font-size: 10px;">opencv</a> <a href="/tags/raspberry/" style="font-size: 13.33px;">raspberry</a> <a href="/tags/robomaster/" style="font-size: 10px;">robomaster</a> <a href="/tags/ubuntu/" style="font-size: 20px;">ubuntu</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 16.67px;">深度学习</a> <a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" style="font-size: 10px;">科学上网</a>
+		</div>
+		
+	</div>
+
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			文章归档
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/">2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">19</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2024
+		<a href="/">紅葉</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="kira-post">
+	<article>
+		
+		<div class="kira-post-cover">
+			<img
+				data-src="/raspberry/0.png"
+				data-sizes="auto"
+				alt="ubuntu树莓派无屏幕远程连接"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>ubuntu树莓派无屏幕远程连接</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2023年06月02日</a>
+			<a><i class="kirafont icon-edit-fill"></i>835 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 3 分钟</a>
+		</div>
+		<h3><span id="硬件准备">硬件准备</span></h3><p>1.树莓派（这个必须有吧）</p>
+<p>2.SD卡（16G或32G（个人推荐32G））</p>
+<p>3.USB读卡器（读取SD卡用的，如果你的电脑自带sd卡槽就不需要）</p>
+<p>4.网线（这个可有可无，不过没有网线会很痛苦的）</p>
+<p>3.网线（这个可有可无，不过没有网线会很痛苦的）</p>
+<h3><span id="软件准备">软件准备</span></h3><p><strong>1.烧录镜像的工具<a target="_blank" rel="noopener" href="https://www.balena.io/etcher/">blaenEtcher</a></strong></p>
+<p><img src="/img/loading.gif" data-original="/raspberry/1.png"></p>
+<p>如果打不开请下载以下软件</p>
+<p>sudo apt install fuse -y</p>
+<p>下载后直接双击下载的Applmage文件就能打开</p>
+<p>树莓派安装全家桶链接(注：基本都是Windows的软件)<a target="_blank" rel="noopener" href="https://www.joycekirkland.site/index.php/2021/07/22/%e6%a0%91%e8%8e%93%e6%b4%beqt5opencv%e9%85%8d%e7%bd%ae%e3%80%90%e6%97%a0%e5%b1%8f%e5%b9%95%e8%bf%9c%e7%a8%8b%e8%bf%9e%e6%8e%a5%e3%80%91/">Windows版树莓派无屏幕连接</a>：</p>
+<p>如果你在ubuntu只需要拿里面的镜像文件即可</p>
+<p><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/11IX4VvAdE8_sgstE5ihM-w">https://pan.baidu.com/s/11IX4VvAdE8_sgstE5ihM-w</a></p>
+<p>提取码：mpcq</p>
+<p>插上SD卡，选择镜像，开始烧录</p>
+<p><img src="/img/loading.gif" data-original="/raspberry/2.png"></p>
+<p><strong>2.远程登录工具putty：</strong></p>
+<p>sudo apt-get install putty -y</p>
+<p>随便开一个终端输入：putty 就能打开putty</p>
+<p><strong>3.找树莓派地址</strong></p>
+<p>这吊玩意是最烦的，有网线还好，没网线等痛苦吧</p>
+<p>安装找ip的nmap</p>
+<p>sudo apt-get install nmap</p>
+<p><strong>无网线的情况下：</strong></p>
+<p>需添加网络配置文件</p>
+<p>1.wpa_supplicant.conf 文件</p>
+<p>打开终端，输入 touch wpa_supplicant.conf</p>
+<p>​							touch ssh</p>
+<p>共两个文件，ssh这个文件不需要动，保持空白即可</p>
+<p>这两个文件每次启动树莓派之前都需要弄进bool里面，即使树莓派没连上WiFi，这两个文件也会消失</p>
+<p>wpa_supplicant.conf文件中复制以下内容，ssid是WiFi名称，psk是WiFi密码，可以用手机热点（如果你手机热点可以直接看到地址可以无视nmap）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">country=CN <br>ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev <br>update_config=1 <br><br>network=&#123; <br>ssid=&quot;B3-4&quot; <br>psk=&quot;12345678&quot; <br>key_mgmt=WPA-PSK <br>priority=1 <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>插入SD卡，将上面两个文件塞进boot文件夹中，打开终端，输入:</p>
+<p>sudo nmap -n 192.168.1.1&#x2F;24              (树莓派的ip是会变的，这就很烦，每一次要找一遍，找不到就重启树莓派再找一遍，很麻烦)</p>
+<p><img src="/img/loading.gif" data-original="/raspberry/3.png"></p>
+<p>————————-分割线————————-</p>
+<h4><span id="有网线配置方法这个简单很多">有网线配置方法（这个简单很多）</span></h4><p>准备一根网线即可，下载nmap</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">sudo apt-get install nmap<br></code></pre></td></tr></table></figure>
+
+<p>打开设置</p>
+<p><img src="/img/loading.gif" data-original="/raspberry/14.png"></p>
+<p>选择IPv4 选择与其他计算机共享</p>
+<p><img src="/img/loading.gif" data-original="/raspberry/13.png"></p>
+<p>树莓派连上网线后直接输入 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">sudo nmap -n 10.42.1/24<br></code></pre></td></tr></table></figure>
+
+<p><img src="/img/loading.gif" data-original="/raspberry/15.png"></p>
+<p>这个ip是不会变的· - · 所以插网线只需要找一次ip记住它就行</p>
+<p>————————–分割线—————————-</p>
+<p><strong>以下是无网线ip的操作</strong></p>
+<p>打开终端，输入putty，打开putty</p>
+<p>找到叫raspiberry的设备，复制ip到putty</p>
+<p><img src="/img/loading.gif" data-original="/raspberry/4.png"></p>
+<p><img src="/img/loading.gif" data-original="/raspberry/5.png"></p>
+<p>树莓派用户名为：pi</p>
+<p>默认密码为：raspberry</p>
+<p><img src="/img/loading.gif" data-original="/raspberry/6.png"></p>
+<p>如果你要换源或是装opencv，都可以不需要连接vnc，有vnc方便些罢了</p>
+<p><a href>换源网址</a></p>
+<p>进入终端后，输入 sudo raspi-config</p>
+<p>选择第三个</p>
+<p><img src="/img/loading.gif" data-original="/raspberry/7.png"></p>
+<p>选择VNC</p>
+<p><img src="/img/loading.gif" data-original="/raspberry/8.png"></p>
+<p>选Yes</p>
+<p><img src="/img/loading.gif" data-original="/raspberry/9.png"></p>
+<p>完成后回车退出回到终端</p>
+<p><img src="/img/loading.gif" data-original="/raspberry/10.png"></p>
+<p>然后输入sudo apt-get update</p>
+<p>完成后输入 sudo apt-get install tightvncserver</p>
+<p>完成后输入 tightvncserver</p>
+<p><img src="/img/loading.gif" data-original="/raspberry/12.png"></p>
+<p>如果不是上面的画面那么就重新开始吧</p>
+<p>注：能在终端完成的事，就不需要配置vnc远程连接</p>
+<h3><span id="使用vnc远程连接树莓派">使用VNC远程连接树莓派</span></h3><p>1.下载VNC<a target="_blank" rel="noopener" href="https://www.realvnc.com/en/connect/download/viewer/">下载地址</a></p>
+<p><img src="/img/loading.gif" data-original="/raspberry/11.png"></p>
+<p>下载安装包 然后用 sudo dpkg -i 文件名.deb 安装</p>
+<p>打开VNC，输入树莓派ip + :5901（英文冒号）</p>
+<p><img src="/img/loading.gif" data-original="/raspberry/16.png"></p>
+<p>选择continue</p>
+<p><img src="/img/loading.gif" data-original="/raspberry/17.png"></p>
+<p>密码默认是：123456</p>
+<p><img src="/img/loading.gif" data-original="/raspberry/18.png"></p>
+<p>成功连接树莓派</p>
+<p><img src="/img/loading.gif" data-original="/raspberry/19.png"></p>
+<h5><span id="给树莓派换源"></span></h5><h5><span id="安装opencv"></span></h5><h5><span id="树莓派开机自启动"></span></h5>
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>紅葉<br>
+        <strong>本文链接：</strong><a href="https://swe-et.github.io/raspberry/" title="https:&#x2F;&#x2F;swe-et.github.io&#x2F;raspberry&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;swe-et.github.io&#x2F;raspberry&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			          
+			<!-- 先找到与当前文字相同的目录 -->
+			   
+			<!-- 在找到当前文章所在的 index -->
+			       
+			<!-- 下一篇文章 -->
+			<div class="new">
+				<span>下一章</span>
+				<a href="/respberry-pro-max/"> 树莓派开机自启动脚本</a>
+			</div>
+			                         
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+			<a class="kirafont icon-container-fill -link" href="/categories/raspberry/">raspberry</a>
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/raspberry/" rel="tag">raspberry</a>
+		
+	</div>
+	
+		<script src="/js/kira-code-copy.js"></script>
+	
+	
+	<div class="kira-post-footer">
+		
+	<link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css" />
+	<div id="gitalk"></div>
+	<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+	<script type="text/javascript">
+		const gitalk = new Gitalk({
+			clientID: '605688881c2e008e46bb',
+			clientSecret: '6a86c5fe6ba8b58eef0e3f81f78cd4768f500f69',
+			id: 'ubuntu树莓派无屏幕远程连接',
+			repo: 'Swe-et.github.io',
+			owner: 'Swe-et',
+			admin: 'Swe-et',
+			title: 'RulatedayDnd5eWiki',
+		});
+		gitalk.render('gitalk');
+	</script>
+
+
+		
+	<link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css" />
+	<div id="gitalk"></div>
+	<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+	<script type="text/javascript">
+		const gitalk = new Gitalk({
+			clientID: '605688881c2e008e46bb',
+			clientSecret: '6a86c5fe6ba8b58eef0e3f81f78cd4768f500f69',
+			id: 'ubuntu树莓派无屏幕远程连接',
+			repo: 'Swe-et.github.io',
+			owner: 'Swe-et',
+			admin: 'Swe-et',
+			title: 'RulatedayDnd5eWiki',
+		});
+		gitalk.render('gitalk');
+	</script>
+
+
+	</div>
+	
+</div>
+
+
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+<script type="text/javascript" src="\js\top.js"></script>
+
+		</div>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/love.js"></script>
+
+<!--动态线条背景-->
+<script type="text/javascript"
+color="255,192,203" opacity='1.0' zIndex="-2" count="750" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!--浏览器搞笑标题-->
+<script type="text/javascript" src="\js\FunnyTitle.js"></script>
+
+
+
+<!-- 雪花特效 -->
+<script type="text/javascript" src="\js\snow.js"></script>
+	
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
+</html>
