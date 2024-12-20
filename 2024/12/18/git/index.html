@@ -10,7 +10,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="ASLwant,"> 
-    
+    <meta name="description" content="首先注册一个github或者gitee账号，用于上传代码
+ssh-keygen -t rsa -b 4096 -C”your-email”获得一个密钥在~&amp;#x2F;.ssh中id_rsa———–私,"> 
     <meta name="author" content="ASLwant"> 
     <link rel="alternative" href="atom.xml" title="ASLwant&#39;s Blog" type="application/atom+xml"> 
     <link rel="icon" href="/img/loading.gif"> 
@@ -21,7 +22,8 @@
     
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:title" content="git - ASLwant&#39;s Blog"/>
-    
+    <meta name="twitter:description" content="首先注册一个github或者gitee账号，用于上传代码
+ssh-keygen -t rsa -b 4096 -C”your-email”获得一个密钥在~&amp;#x2F;.ssh中id_rsa———–私,"/>
     
     
     
@@ -29,7 +31,8 @@
     <meta property="og:site_name" content="ASLwant&#39;s Blog"/>
     <meta property="og:type" content="object"/>
     <meta property="og:title" content="git - ASLwant&#39;s Blog"/>
-    
+    <meta property="og:description" content="首先注册一个github或者gitee账号，用于上传代码
+ssh-keygen -t rsa -b 4096 -C”your-email”获得一个密钥在~&amp;#x2F;.ssh中id_rsa———–私,"/>
     
 <link rel="stylesheet" href="/css/diaspora.css">
 
@@ -69,7 +72,12 @@
 
         </div>
         <div class="content markdown">
-            
+            <p>首先注册一个github或者gitee账号，用于上传代码</p>
+<p>ssh-keygen -t rsa -b 4096 -C”your-email”<br>获得一个密钥在~&#x2F;.ssh中<br>id_rsa———–私钥<br>id_rsa.pub—–公钥</p>
+<p>cat ~&#x2F;.ssh&#x2F;id_rsa.pub复制公钥<br>去github上添加密钥(把复制的公钥粘贴上去)</p>
+<p>git clone <a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<p>git config –global user.name 用户名	 	设置用户签名<br>git config –global user.email 邮箱 		设置用户签名<br>git init									初始化本地库<br>git status	 							查看本地库状态<br>git add 文件名	  						添加到暂存区<br>git commit-m “日志信息” 文件名	   		提交到本地库<br>git reflog&#x2F;git log							查看历史记录<br>git reset –hard 版本号					版本穿梭<br>git branch 分支名						创建分支<br>git branch -v							查看分支<br>git checkout 分支名						切换分支<br>git merge 需要合并的分支名				把指定的分支合并到当前分支上<br>git branch -d 分支名						删除分支</p>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
                 <source type="audio/mpeg" src="">
