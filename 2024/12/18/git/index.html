@@ -10,12 +10,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="ASLwant,"> 
-    <meta name="description" content="首先注册一个github或者gitee账号，用于上传代码
+    <meta name="description" content="git安装和配置Linux系统安装git首先注册一个github或者gitee账号，用于上传代码
 安装git1sudo apt-get install git
 
-验证git安装1git --version
-
-配置git生成ssh密钥1ss,"> 
+验证git安装1git --vers,"> 
     <meta name="author" content="ASLwant"> 
     <link rel="alternative" href="atom.xml" title="ASLwant&#39;s Blog" type="application/atom+xml"> 
     <link rel="icon" href="/img/loading.gif"> 
@@ -26,12 +24,10 @@
     
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:title" content="git - ASLwant&#39;s Blog"/>
-    <meta name="twitter:description" content="首先注册一个github或者gitee账号，用于上传代码
+    <meta name="twitter:description" content="git安装和配置Linux系统安装git首先注册一个github或者gitee账号，用于上传代码
 安装git1sudo apt-get install git
 
-验证git安装1git --version
-
-配置git生成ssh密钥1ss,"/>
+验证git安装1git --vers,"/>
     
     
     
@@ -39,12 +35,10 @@
     <meta property="og:site_name" content="ASLwant&#39;s Blog"/>
     <meta property="og:type" content="object"/>
     <meta property="og:title" content="git - ASLwant&#39;s Blog"/>
-    <meta property="og:description" content="首先注册一个github或者gitee账号，用于上传代码
+    <meta property="og:description" content="git安装和配置Linux系统安装git首先注册一个github或者gitee账号，用于上传代码
 安装git1sudo apt-get install git
 
-验证git安装1git --version
-
-配置git生成ssh密钥1ss,"/>
+验证git安装1git --vers,"/>
     
 <link rel="stylesheet" href="/css/diaspora.css">
 
@@ -84,12 +78,12 @@
 
         </div>
         <div class="content markdown">
-            <p>首先注册一个github或者gitee账号，用于上传代码</p>
+            <h2 id="git安装和配置"><a href="#git安装和配置" class="headerlink" title="git安装和配置"></a>git安装和配置</h2><h3 id="Linux系统安装git"><a href="#Linux系统安装git" class="headerlink" title="Linux系统安装git"></a><u>Linux系统安装git</u></h3><p>首先注册一个github或者gitee账号，用于上传代码</p>
 <h4 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure>
 
 <h4 id="验证git安装"><a href="#验证git安装" class="headerlink" title="验证git安装"></a>验证git安装</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
 
-<h2 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h2><h4 id="生成ssh密钥"><a href="#生成ssh密钥" class="headerlink" title="生成ssh密钥"></a>生成ssh密钥</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C&quot;你的github/gitee邮箱&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a><u>配置git</u></h3><h4 id="生成ssh密钥"><a href="#生成ssh密钥" class="headerlink" title="生成ssh密钥"></a>生成ssh密钥</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C&quot;你的github/gitee邮箱&quot;</span><br></pre></td></tr></table></figure>
 
 <p>一直确定后会在你的目录下生成一个文件夹，里面有id_rsa和id_rsa.pub两个文件<br>id_rsa———–私钥<br>id_rsa.pub—–公钥   </p>
 <h4 id="复制公钥"><a href="#复制公钥" class="headerlink" title="复制公钥"></a>复制公钥</h4><p>输入下面命令终端会显示公钥,把公钥复制</p>
@@ -98,12 +92,11 @@
 <p>登录github&#x2F;gitee账号,添加密钥(把复制的公钥粘贴上去)</p>
 <h4 id="验证SSH连接"><a href="#验证SSH连接" class="headerlink" title="验证SSH连接"></a>验证SSH连接</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 
-<p>编辑.gitconfig文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name github/gitee名字</span><br></pre></td></tr></table></figure>
+<h4 id="编辑-gitconfig文件"><a href="#编辑-gitconfig文件" class="headerlink" title="编辑.gitconfig文件"></a>编辑.gitconfig文件</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name github/gitee名字</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name github/gitee邮箱</span><br></pre></td></tr></table></figure>
 
-<h2 id="上传项目"><a href="#上传项目" class="headerlink" title="上传项目"></a>上传项目</h2><h4 id="项目上传部分"><a href="#项目上传部分" class="headerlink" title="项目上传部分"></a><u>项目上传部分</u></h4><p>终端进入要上传的项目目录下</p>
+<h2 id="上传项目"><a href="#上传项目" class="headerlink" title="上传项目"></a>上传项目</h2><h3 id="项目上传部分"><a href="#项目上传部分" class="headerlink" title="项目上传部分"></a><u>项目上传部分</u></h3><p>终端进入要上传的项目目录下</p>
 <h4 id="初始化本地库"><a href="#初始化本地库" class="headerlink" title="初始化本地库"></a>初始化本地库</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init	   </span><br></pre></td></tr></table></figure>
 
 <h4 id="添加所有文件到暂存区"><a href="#添加所有文件到暂存区" class="headerlink" title="添加所有文件到暂存区"></a>添加所有文件到暂存区</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .	   </span><br></pre></td></tr></table></figure>
@@ -123,7 +116,7 @@
 
 <h4 id="推送到指定分支的远程库"><a href="#推送到指定分支的远程库" class="headerlink" title="推送到指定分支的远程库"></a>推送到指定分支的远程库</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin 分支名  </span><br></pre></td></tr></table></figure>
 
-<h4 id="分支管理部分"><a href="#分支管理部分" class="headerlink" title="分支管理部分"></a><u>分支管理部分</u></h4><h4 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch 分支名						</span><br></pre></td></tr></table></figure>
+<h3 id="分支管理部分"><a href="#分支管理部分" class="headerlink" title="分支管理部分"></a><u>分支管理部分</u></h3><h4 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch 分支名						</span><br></pre></td></tr></table></figure>
 
 <h4 id="查看分支"><a href="#查看分支" class="headerlink" title="查看分支"></a>查看分支</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -v</span><br></pre></td></tr></table></figure>
 
@@ -170,7 +163,7 @@
     </div>
     
         <div class="side">
-            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85git"><span class="toc-number">1.</span> <span class="toc-text">安装git</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81git%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">验证git安装</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEgit"><span class="toc-number"></span> <span class="toc-text">配置git</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%9F%E6%88%90ssh%E5%AF%86%E9%92%A5"><span class="toc-number">1.</span> <span class="toc-text">生成ssh密钥</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E5%88%B6%E5%85%AC%E9%92%A5"><span class="toc-number">2.</span> <span class="toc-text">复制公钥</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81SSH%E8%BF%9E%E6%8E%A5"><span class="toc-number">3.</span> <span class="toc-text">验证SSH连接</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE"><span class="toc-number"></span> <span class="toc-text">上传项目</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BC%A0%E9%83%A8%E5%88%86"><span class="toc-number">1.</span> <span class="toc-text">项目上传部分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%9C%AC%E5%9C%B0%E5%BA%93"><span class="toc-number">2.</span> <span class="toc-text">初始化本地库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6%E5%88%B0%E6%9A%82%E5%AD%98%E5%8C%BA"><span class="toc-number">3.</span> <span class="toc-text">添加所有文件到暂存区</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E5%88%B0%E6%9A%82%E5%AD%98%E5%8C%BA"><span class="toc-number">4.</span> <span class="toc-text">添加单个文件到暂存区</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%90%E4%BA%A4%E5%88%B0%E6%9C%AC%E5%9C%B0%E5%BA%93"><span class="toc-number">5.</span> <span class="toc-text">提交到本地库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95"><span class="toc-number">6.</span> <span class="toc-text">查看提交历史记录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E4%BB%93%E5%BA%93%E7%8A%B6%E6%80%81"><span class="toc-number">7.</span> <span class="toc-text">查看当前仓库状态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B8%85%E7%90%86%E7%BC%93%E5%AD%98%E5%8C%BA"><span class="toc-number">8.</span> <span class="toc-text">清理缓存区</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A8%E9%80%81%E5%88%B0%E6%8C%87%E5%AE%9A%E5%88%86%E6%94%AF%E7%9A%84%E8%BF%9C%E7%A8%8B%E5%BA%93"><span class="toc-number">9.</span> <span class="toc-text">推送到指定分支的远程库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E9%83%A8%E5%88%86"><span class="toc-number">10.</span> <span class="toc-text">分支管理部分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF"><span class="toc-number">11.</span> <span class="toc-text">创建分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%88%86%E6%94%AF"><span class="toc-number">12.</span> <span class="toc-text">查看分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF"><span class="toc-number">13.</span> <span class="toc-text">切换分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF"><span class="toc-number">14.</span> <span class="toc-text">合并分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%88%86%E6%94%AF"><span class="toc-number">15.</span> <span class="toc-text">删除分支</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#git%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">git安装和配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85git"><span class="toc-number">1.1.</span> <span class="toc-text">Linux系统安装git</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85git"><span class="toc-number">1.1.1.</span> <span class="toc-text">安装git</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81git%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.2.</span> <span class="toc-text">验证git安装</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEgit"><span class="toc-number">1.2.</span> <span class="toc-text">配置git</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%9F%E6%88%90ssh%E5%AF%86%E9%92%A5"><span class="toc-number">1.2.1.</span> <span class="toc-text">生成ssh密钥</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E5%88%B6%E5%85%AC%E9%92%A5"><span class="toc-number">1.2.2.</span> <span class="toc-text">复制公钥</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81SSH%E8%BF%9E%E6%8E%A5"><span class="toc-number">1.2.3.</span> <span class="toc-text">验证SSH连接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%96%E8%BE%91-gitconfig%E6%96%87%E4%BB%B6"><span class="toc-number">1.2.4.</span> <span class="toc-text">编辑.gitconfig文件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE"><span class="toc-number">2.</span> <span class="toc-text">上传项目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BC%A0%E9%83%A8%E5%88%86"><span class="toc-number">2.1.</span> <span class="toc-text">项目上传部分</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%9C%AC%E5%9C%B0%E5%BA%93"><span class="toc-number">2.1.1.</span> <span class="toc-text">初始化本地库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6%E5%88%B0%E6%9A%82%E5%AD%98%E5%8C%BA"><span class="toc-number">2.1.2.</span> <span class="toc-text">添加所有文件到暂存区</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E5%88%B0%E6%9A%82%E5%AD%98%E5%8C%BA"><span class="toc-number">2.1.3.</span> <span class="toc-text">添加单个文件到暂存区</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%90%E4%BA%A4%E5%88%B0%E6%9C%AC%E5%9C%B0%E5%BA%93"><span class="toc-number">2.1.4.</span> <span class="toc-text">提交到本地库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95"><span class="toc-number">2.1.5.</span> <span class="toc-text">查看提交历史记录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E4%BB%93%E5%BA%93%E7%8A%B6%E6%80%81"><span class="toc-number">2.1.6.</span> <span class="toc-text">查看当前仓库状态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B8%85%E7%90%86%E7%BC%93%E5%AD%98%E5%8C%BA"><span class="toc-number">2.1.7.</span> <span class="toc-text">清理缓存区</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A8%E9%80%81%E5%88%B0%E6%8C%87%E5%AE%9A%E5%88%86%E6%94%AF%E7%9A%84%E8%BF%9C%E7%A8%8B%E5%BA%93"><span class="toc-number">2.1.8.</span> <span class="toc-text">推送到指定分支的远程库</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E9%83%A8%E5%88%86"><span class="toc-number">2.2.</span> <span class="toc-text">分支管理部分</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF"><span class="toc-number">2.2.1.</span> <span class="toc-text">创建分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%88%86%E6%94%AF"><span class="toc-number">2.2.2.</span> <span class="toc-text">查看分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF"><span class="toc-number">2.2.3.</span> <span class="toc-text">切换分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF"><span class="toc-number">2.2.4.</span> <span class="toc-text">合并分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%88%86%E6%94%AF"><span class="toc-number">2.2.5.</span> <span class="toc-text">删除分支</span></a></li></ol></li></ol></li></ol>
         </div>
     
 </div>
