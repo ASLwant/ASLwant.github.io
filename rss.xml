@@ -217,14 +217,14 @@
         </item>
         <item>
             <guid isPermalink="true">http://example.com/Clash/</guid>
-            <title>科学上网</title>
+            <title>Ubuntu安装clash-verge</title>
             <link>http://example.com/Clash/</link>
             <pubDate>Mon, 02 Dec 2024 00:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;建议下载&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3p6emd5ZGkvY2xhc2gtdmVyZ2UvcmVsZWFzZXMvdGFnL3YxLjMuOA==&#34;&gt;clash-verge&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;找到clash-verge_1.3.8_amd64.deb下载&lt;/p&gt;
-&lt;p&gt;进入clash-verge_1.3.8_amd64.deb所在的目录   &lt;/p&gt;
+            <description><![CDATA[ &lt;p&gt;下载&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3p6emd5ZGkvY2xhc2gtdmVyZ2UvcmVsZWFzZXM=&#34;&gt;clash-verge&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;找到deb格式的clash-verge下载&lt;/p&gt;
+&lt;p&gt;进入clash-verge所在的目录   &lt;/p&gt;
 &lt;p&gt;打开终端，输入以下命令&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo dpkg -i clash-verge_1.3.8_amd64.deb&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo dpkg -i clash-verge&amp;lt;你的clash版本&amp;gt;.deb&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zMS5ieXRlMTEuY29tL2FwaS92MS9jbGllbnQvc3Vic2NyaWJlP3Rva2VuPTYyODE0MzFmZGZkZDJiYjYxYzBmZTFhZjZmNmRmZGFl&#34;&gt;https://s1.byte11.com/api/v1/client/subscribe?token=6281431fdfdd2bb61c0fe1af6f6dfdae&lt;/span&gt;&lt;/p&gt;

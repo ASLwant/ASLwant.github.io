@@ -67,9 +67,9 @@
         {
             "id": "http://example.com/Clash/",
             "url": "http://example.com/Clash/",
-            "title": "科学上网",
+            "title": "Ubuntu安装clash-verge",
             "date_published": "2024-12-01T16:00:00.000Z",
-            "content_html": "<p>建议下载<span class=\"exturl\" data-url=\"aHR0cHM6Ly9naXRodWIuY29tL3p6emd5ZGkvY2xhc2gtdmVyZ2UvcmVsZWFzZXMvdGFnL3YxLjMuOA==\">clash-verge</span></p>\n<p>找到clash-verge_1.3.8_amd64.deb下载</p>\n<p>进入clash-verge_1.3.8_amd64.deb所在的目录   </p>\n<p>打开终端，输入以下命令</p>\n<figure class=\"highlight shell\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">sudo dpkg -i clash-verge_1.3.8_amd64.deb</span><br></pre></td></tr></table></figure>\n\n\n<p><span class=\"exturl\" data-url=\"aHR0cHM6Ly9zMS5ieXRlMTEuY29tL2FwaS92MS9jbGllbnQvc3Vic2NyaWJlP3Rva2VuPTYyODE0MzFmZGZkZDJiYjYxYzBmZTFhZjZmNmRmZGFl\">https://s1.byte11.com/api/v1/client/subscribe?token=6281431fdfdd2bb61c0fe1af6f6dfdae</span></p>\n",
+            "content_html": "<p>下载<span class=\"exturl\" data-url=\"aHR0cHM6Ly9naXRodWIuY29tL3p6emd5ZGkvY2xhc2gtdmVyZ2UvcmVsZWFzZXM=\">clash-verge</span></p>\n<p>找到deb格式的clash-verge下载</p>\n<p>进入clash-verge所在的目录   </p>\n<p>打开终端，输入以下命令</p>\n<figure class=\"highlight shell\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">sudo dpkg -i clash-verge&lt;你的clash版本&gt;.deb</span><br></pre></td></tr></table></figure>\n\n\n<p><span class=\"exturl\" data-url=\"aHR0cHM6Ly9zMS5ieXRlMTEuY29tL2FwaS92MS9jbGllbnQvc3Vic2NyaWJlP3Rva2VuPTYyODE0MzFmZGZkZDJiYjYxYzBmZTFhZjZmNmRmZGFl\">https://s1.byte11.com/api/v1/client/subscribe?token=6281431fdfdd2bb61c0fe1af6f6dfdae</span></p>\n",
             "tags": []
         },
         {
