@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "ASLwant • All posts by \"vscode\" tag",
+    "description": "",
+    "home_page_url": "http://example.com",
+    "items": [
+        {
+            "id": "http://example.com/PlantUML/",
+            "url": "http://example.com/PlantUML/",
+            "title": "VScode插件PlantUML",
+            "date_published": "2024-12-23T16:00:00.000Z",
+            "content_html": "<p>打开VScode，搜索PlantUML，安装</p>\n",
+            "tags": [
+                "VScode"
+            ]
+        }
+    ]
+}

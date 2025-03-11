@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>ASLwant • Posts by &#34;分组名&#34; category</title>
+        <link>http://example.com</link>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 24 Dec 2024 00:00:00 +0800</pubDate>
+        <lastBuildDate>Tue, 24 Dec 2024 00:00:00 +0800</lastBuildDate>
+        <category>学习记录</category>
+        <category>VScode</category>
+        <item>
+            <guid isPermalink="true">http://example.com/PlantUML/</guid>
+            <title>VScode插件PlantUML</title>
+            <link>http://example.com/PlantUML/</link>
+            <category>VScode</category>
+            <pubDate>Tue, 24 Dec 2024 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;打开VScode，搜索PlantUML，安装&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
