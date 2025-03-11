@@ -94,7 +94,7 @@
         </item>
         <item>
             <guid isPermalink="true">http://example.com/Git/</guid>
-            <title>git</title>
+            <title>git项目版本管理（Ubuntu）</title>
             <link>http://example.com/Git/</link>
             <pubDate>Wed, 18 Dec 2024 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;git安装和配置&#34;&gt;&lt;a href=&#34;#git安装和配置&#34; class=&#34;headerlink&#34; title=&#34;git安装和配置&#34;&gt;&lt;/a&gt;git安装和配置&lt;/h2&gt;&lt;h3 id=&#34;Linux系统安装git&#34;&gt;&lt;a href=&#34;#Linux系统安装git&#34; class=&#34;headerlink&#34; title=&#34;Linux系统安装git&#34;&gt;&lt;/a&gt;&lt;u&gt;Linux系统安装git&lt;/u&gt;&lt;/h3&gt;&lt;p&gt;首先注册一个github或者gitee账号，用于上传代码&lt;/p&gt;

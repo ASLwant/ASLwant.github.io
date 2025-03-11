@@ -91,7 +91,7 @@
     </entry>
     <entry>
         <id>http://example.com/Git/</id>
-        <title>git</title>
+        <title>git项目版本管理（Ubuntu）</title>
         <link rel="alternate" href="http://example.com/Git/"/>
         <content type="html">&lt;h2 id=&#34;git安装和配置&#34;&gt;&lt;a href=&#34;#git安装和配置&#34; class=&#34;headerlink&#34; title=&#34;git安装和配置&#34;&gt;&lt;/a&gt;git安装和配置&lt;/h2&gt;&lt;h3 id=&#34;Linux系统安装git&#34;&gt;&lt;a href=&#34;#Linux系统安装git&#34; class=&#34;headerlink&#34; title=&#34;Linux系统安装git&#34;&gt;&lt;/a&gt;&lt;u&gt;Linux系统安装git&lt;/u&gt;&lt;/h3&gt;&lt;p&gt;首先注册一个github或者gitee账号，用于上传代码&lt;/p&gt;
 &lt;h4 id=&#34;安装git&#34;&gt;&lt;a href=&#34;#安装git&#34; class=&#34;headerlink&#34; title=&#34;安装git&#34;&gt;&lt;/a&gt;安装git&lt;/h4&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt-get install git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
